@@ -97,6 +97,7 @@
     ]
   },
   "dependencies": {
+    "ethereum-cryptograph" "*",
     "sails": "1.5.0",
     "simple-git": "3.14.1",
     "body-parser": "^1.19.0",
