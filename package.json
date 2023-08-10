@@ -97,6 +97,7 @@
     ]
   },
   "dependencies": {
+    "import-in-the-middle": "1.4.1", 
     "sails": "1.5.0",
     "simple-git": "3.14.1",
     "body-parser": "^1.19.0",
