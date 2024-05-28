@@ -97,7 +97,7 @@
     ]
   },
   "dependencies": {
-    "simple-git": "3.14.1",
+    "simple-git": "3.16.0",
     "body-parser": "^1.19.0",
     "check-dependencies": "^1.1.0",
     "clarinet": "^0.12.4",
@@ -151,7 +151,7 @@
     "replace": "^1.2.0",
     "request": "^2.88.2",
     "sanitize-filename": "^1.6.3",
-    "sanitize-html": "1.4.2",
+    "sanitize-html": "1.11.4",
     "semver": "^7.3.2",
     "sequelize": "^5.22.3",
     "sequelize-noupdate-attributes": "^1.0.0",
