@@ -27,4 +27,4 @@ jobs:
       - name: Run Snyk Code
         run: |
           snyk code test --severity-threshold=high
-        continue-on-error: true
+        continue-on-error: false
