@@ -23,8 +23,14 @@ jobs:
         run: |
           sudo npm install -g snyk
           snyk auth ${SNYK_TOKEN}
-      # Run Snyk Code
-      - name: Run Snyk Code
+      # Run Snyk SCA
+      - name: Run Snyk SCA
         run: |
-          snyk code test --severity-threshold=high
+          snyk test --severity-threshold=high
+        continue-on-error: true
+
+        # Run Snyk Monitor
+      - name: Run Snyk Monitor
+        run: |
+          snyk monitor --severity-threshold=high
         continue-on-error: true
