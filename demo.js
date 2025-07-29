@@ -64,11 +64,18 @@ function adminLoginSuccess(redirectPage, session, username, res) {
   }
 }
 
+const { rateLimit } = require('express-rate-limit');
+const loginRateLimiter = rateLimit({
+  windowMs: 30 * 60 * 1000, // 30 minutes
+  limit: 5, // Limit each IP to 5 requests per windowMs
+});
 exports.login = function (req, res, next) {
-  return res.render('admin', {
-    title: 'Admin Access',
-    granted: false,
-    redirectPage: req.query.redirectPage
+  return loginRateLimiter(req, res, () => {
+    return res.render('admin', {
+      title: 'Admin Access',
+      granted: false,
+      redirectPage: req.query.redirectPage
+    });
   });
 };
 
